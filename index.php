@@ -3,28 +3,27 @@
 <html>
 
 <head>
-    <title>Site</title>
+
+    <title>Site de registro</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
 
-    
-
 </head>
 
 <body>
 
-    <h1>Cadastro de aparelho eletrônico</h1>
+    <h1>Registro de dispositivo eletrônico</h1>
 
-    <h3>Cadastre um aparelho:</h3>
+    <h3>Registre um dispositivo:</h3>
     
-    <form action="cadastro.php" method="post">
+    <form action="registro.php" method="post">
         
         <p>
-            <label>Nome do aparelho:</label><br>
-            <input type="text" name="aparelho" required>
+            <label>Nome do dispositivo:</label><br>
+            <input type="text" name="dispositivo" required>
         </p>    
 
         <p>
@@ -33,12 +32,12 @@
         </p>
 
         <p>
-            <label>Quantas horas o aparelho fica ligado por dia:</label><br>
+            <label>Quantas horas o dispositivo fica ligado por dia:</label><br>
             <input type="number" name="horasDia" required min="0" max="24">
         </p>
 
         <p>
-            <label>Quantos dias por mês o aparelho fica ligado:</label><br>
+            <label>Quantos dias por mês o dispositivo fica ligado:</label><br>
             <input type="number" name="diasMes" required min="0" max="31">
         </p>
 
@@ -48,7 +47,7 @@
         </p>
 
         <p>
-            <button type="submit" name="cadastrar">Cadastrar</button>
+            <button type="submit" name="registrar">Registrar</button>
         </p>
 
     </form>

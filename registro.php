@@ -1,24 +1,28 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-    <title>resultado do cadastro</title>
+
+    <title>Resultado do registro</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <h1>Aparelho cadastrado</h1>
+    <h1>Dispositivo registrado</h1>
 
     <?php
     
-    if(isset($_POST['cadastrar']))
+    if(isset($_POST['registrar']))
     {
 
         //entrada de dados (via form)
-        $aparelho    = $_POST['aparelho'];
+        $dispositivo    = $_POST['dispositivo'];
         $consumo_max = $_POST['consumoMax'];
         $horas_dia  = $_POST['horasDia'];
         $dias_mes    = $_POST['diasMes'];
@@ -49,29 +53,27 @@
             $cat = 'Alta';
         }
         
-        //formatar valores  monetarios
+        //formatar valores  monetários
         $valor_kwh = number_format($valor_kwh, '2', ',', '.');
 
         $consumo_reais = number_format ($consumo_reais, '2', ',', '.');
 
         //saída de dados
-        echo "<strong>Nome do aparelho</strong>: $aparelho<br>";
+        echo "<strong>Nome do dispositivo</strong>: $dispositivo<br>";
         echo "<strong>Consumo máximo em watts</strong>: $consumo_max w<br>";
-        echo "<strong>Quantas horas o aparelho fica ligado ao dia</strong>: $horas_dia h<br>";
-        echo "<strong>Quantos dias o aparelho fica ligado por mês</strong>: $dias_mes dias<br>";
+        echo "<strong>Quantas horas o dispositivo fica ligado ao dia</strong>: $horas_dia h<br>";
+        echo "<strong>Quantos dias o dispositivo fica ligado por mês</strong>: $dias_mes dias<br>";
         echo "<strong>Valor do Kilowatt-hora: R$ </strong> $valor_kwh<br>";
         echo "<strong>Consumo diário</strong>: $consumo_dia w<br>";
         echo "<strong>Consumo mensal</strong>: $consumo_mens w<br>";
         echo "<strong>Consumo em reias: R$ </strong> $consumo_reais<br>";
-        echo "<strong>Categoria de consumo do aparelho</strong>: $cat<br>";
+        echo "<strong>Categoria de consumo do dispositivo</strong>: $cat<br>";
     }    
     else
     {
-        echo "<h3>Nenhum aparelho foi cadastrado!</h3>";
+        echo "<h3>Nenhum dispositivo eletrônico foi registrado!</h3>";
     }
         
-    
-
     ?>
 
     <p>
